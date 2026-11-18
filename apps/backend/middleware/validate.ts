@@ -19,8 +19,6 @@ const validate =
       return;
     }
 
-    // trimmed, typed, defaults applied, unknown keys removed.
-    // Express 5 makes req.query read-only, so plain assignment would throw.
     Object.defineProperty(req, source, {
       value: result.data,
       writable: true,
