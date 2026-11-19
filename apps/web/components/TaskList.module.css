@@ -1,0 +1,118 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.column {
+  min-height: 260px;
+  padding: 18px;
+  border: 1px solid #e8eaed;
+  border-radius: 16px;
+  background: #f1f3f4;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.columnTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #3c4043;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.statusDot {
+  width: 9px;
+  height: 9px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.todo {
+  background: #9aa0a6;
+}
+
+.in-progress {
+  background: #1a73e8;
+}
+
+.done {
+  background: #188038;
+}
+
+.count {
+  display: grid;
+  min-width: 26px;
+  height: 26px;
+  padding: 0 7px;
+  place-items: center;
+  border-radius: 999px;
+  background: #e8eaed;
+  color: #5f6368;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.taskList {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.taskCard {
+  padding: 16px;
+  border: 1px solid #e8eaed;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgb(60 64 67 / 8%);
+}
+
+.taskTitle {
+  margin: 0;
+  color: #202124;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.taskDescription {
+  margin: 8px 0 0;
+  color: #5f6368;
+  font-size: 0.825rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.emptyState {
+  padding: 20px 12px;
+  border: 1px dashed #dadce0;
+  border-radius: 12px;
+  color: #80868b;
+  font-size: 0.825rem;
+  text-align: center;
+}
+
+@media (max-width: 850px) {
+  .board {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .column {
+    min-height: 0;
+  }
+}
